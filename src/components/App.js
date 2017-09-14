@@ -10,15 +10,17 @@ class App extends Component {
   constructor(props) {
    super(props);
 
-   this.state = {
-      vehicles: [],
-      value: '',
-      pilot: ''
-   }
-
    this.setVehicles = this.setVehicles.bind(this);
    this.setValue = this.setValue.bind(this);
    this.setPilot = this.setPilot.bind(this);
+   this.setState = this.setState.bind(this);
+
+   this.state = {
+     vehicles: [],
+     value: '',
+     pilot: '',
+     this: this
+   }
 
 };
 
@@ -46,11 +48,13 @@ class App extends Component {
   // Then, set the value of the input back to an empty string.
   // Enter your code below:
 
-  handleSubmit(event){
+  handleSubmit = (event)=>{
     event.preventDefault();
-    this.setPilot(event.target.value);
-    this.setValue("");
-    alert('Thank you, ' + this.state.pilot + ' has been selected');
+    this.setState({
+      pilot: this.state.value,
+      value: ""
+    });
+    alert('Thank you, ' + this.state.value + ' has been selected');
 
   }
 
