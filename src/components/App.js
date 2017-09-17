@@ -92,10 +92,22 @@ class App extends Component {
     let allVehicles = this.state.vehicles;
     let vehicles = allVehicles.map((vehicles)=>{
       return (
-        //
-        console.log("card test")
+        <div key={vehicles.name}>
+          <div className="card">
+            <h3>{vehicles.name}</h3>
+            <li>model: {vehicles.model}</li>
+            <li>manufacturer: {vehicles.manufacturer}</li>
+            <li>class: {vehicles.class}</li>
+            <li>passengers: {vehicles.passengers}</li>
+            <li>crew: {vehicles.crew}</li>
+            <li>length: {vehicles.length}</li>
+            <li>max speed: {vehicles.max_atmosphering_speed}</li>
+            <li>cargo capacity: {vehicles.cargo_capacity}</li>
+            <li></li>
+          </div>
+        </div>
       )
-    })
+    });
 
     return (
       <div className="App">
