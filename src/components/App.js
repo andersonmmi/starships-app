@@ -91,9 +91,10 @@ class App extends Component {
     */
     let allVehicles = this.state.vehicles;
     let vehicles = allVehicles.map((vehicles)=>{
-      return
-        // card
-      ;
+      return (
+        //
+        console.log("card test")
+      )
     })
 
     return (
