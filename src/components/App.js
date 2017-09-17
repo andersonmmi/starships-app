@@ -103,7 +103,6 @@ class App extends Component {
             <li>length: {vehicles.length}</li>
             <li>max speed: {vehicles.max_atmosphering_speed}</li>
             <li>cargo capacity: {vehicles.cargo_capacity}</li>
-            <li></li>
           </div>
         </div>
       )
@@ -123,7 +122,9 @@ class App extends Component {
           </label>
           <input type="submit" value="Submit" />
         </form>
-
+        <div>
+          {vehicles}
+        </div>
       </div>
     );
   }
